@@ -1,0 +1,22 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // url      = env("MY_VARIABLE")
+ url      = "postgresql://testdb_owner:itQ5D4JgnsZO@ep-aged-haze-a5bapsgg.us-east-2.aws.neon.tech/testdb?sslmode=require"
+}
+
+//connection pool
+//DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYWQ4NzMzMzQtYmFkNy00OGI4LWI1NDktMWQwNTc4NTAxNzFhIiwidGVuYW50X2lkIjoiOTI0ZmI2YzAxYTU3MzQ1MDI1NTdkYmY2OWZlN2E1NzQwMGRmMDQ5ZGUxZDBkZWVmYmM3M2FkN2FlNmJhNDAxMCIsImludGVybmFsX3NlY3JldCI6IjAxODFjNTc2LTE1NTAtNDIyYy1hNTU1LTY5ZGE1ZjlmMGFlYiJ9.OseAzxxSoxnzpxQL_i99Mx_NcU3IzckkM18_4XWcXBc"
+// DIRECT_URL="<YOUR_DATABASE_CONNECTION_STRING>"
+
+model user {
+  id Int @id @default(autoincrement())
+  name String
+  password String
+  address Json  
+}
