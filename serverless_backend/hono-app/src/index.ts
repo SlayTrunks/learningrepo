@@ -12,7 +12,7 @@ const middleware = async(c:Context,next:Next)=>{
   }else{
     return c.text("you are not authenticated",401)
   }
-}
+} 
 // app.use(middleware) we can use middleware like this
 //getting input from user
 app.get('/',middleware, async (c) => { //used middleware here
